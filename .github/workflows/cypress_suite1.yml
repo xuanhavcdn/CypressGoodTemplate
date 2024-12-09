@@ -1,0 +1,44 @@
+name: Cypress Tests Suite 1
+
+on: 
+  push:
+    branches:
+      - main  # Or the branch you want to trigger the workflow
+
+jobs:
+  cypress-run:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false # In case any tests fail, continue with others
+
+    steps:
+      # Step 1: Checkout the code
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # Step 2: Set up Node.js (if needed, this can be skipped if you already have Node.js set up in your repo)
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16' # Replace with the Node.js version you are using
+
+      # Step 3: Install dependencies
+      - name: Install dependencies
+        run: |
+          npm install
+
+      # Step 4: Run Cypress Tests
+      - name: Run Cypress Tests
+        run: |
+          CYPRESS_ENV=staging npx cypress run --spec "cypress/e2e/tests/01.e2eTests/**/*.ts" --record --key $CYPRESS_RECORD_KEY
+        env:
+          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}  # Ensure that this secret is set in your GitHub repository
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Automatically provided by GitHub
+
+      # Step 5: Upload Cypress reports as an artifact
+      - name: Upload Cypress reports
+        uses: actions/upload-artifact@v3
+        with:
+          name: cypress-reports-suite1
+          path: cypress/reports  # Specify the path to the Cypress reports directory
+
