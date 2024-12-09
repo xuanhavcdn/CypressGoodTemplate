@@ -33,8 +33,8 @@ CYPRESS_ENV=staging npx cypress run
 | Can type a valid explanation                           | Explanation input field                                         |
 | Form submits successfully with all required fields filled | Submit button (all fields filled correctly)                     |
 | Form submission shows success message                  | Success message after form submission ("Your inquiry has been submitted successfully!") |
-| Form doesn't submit with missing required fields       | Submit button (missing fields: email, first name, last name, type of association, explanation) |
-| Can submit the form with only required fields filled (email, first name, last name, type of association, explanation) | Submit button (only required fields filled)                     |
+| Form doesn't submit with missing required fields       | Submit button (missing fields: email, first name, last name, infoSource, Services of Interest, type of association) |
+| Can submit the form with only required fields filled (email, first name, last name, infoSource, Services of Interest, type of association) | Submit button (only required fields filled)                     |
 | Form shows error message for invalid email format      | Email input field (invalid email format, e.g., missing '@')     |
 | Can submit form with "Other" selected for "Type of Association" | "Type of Association" dropdown (select "Other" and input explanation) |
 | Form correctly resets after reload successful submission screen | Reload the page after submission (check that form fields are reset) |
@@ -47,11 +47,8 @@ CYPRESS_ENV=staging npx cypress run
 | First Name, Last Name, and Explanation fields accept valid input length | First Name, Last Name, Explanation input fields (check max character limits) |
 | Form doesn't submit with partially filled fields (missing some required fields) | Submit button (e.g., email and first name filled, but missing explanation or services) |
 | Form prevents multiple submissions                     | Submit button (prevent multiple clicks or submissions)         |
-| Submit button is disabled until all required fields are filled correctly | Submit button (check if it's disabled when required fields are empty) |
 | Focus is correctly set to the first field on form load | First Name (or email, depending on your form flow) input field  |
 | Form fields are navigable using the Tab key            | Tab key navigation (ensure focus moves correctly between fields) |
 | Form works properly across different browsers          | Cross-browser testing (Chrome, Firefox, Safari, Edge)          |
-| Form is accessible via screen readers and keyboard      | Accessibility (check ARIA roles, labels, and keyboard navigation) |
 | Browser auto-fill works for required fields            | Auto-fill (check if browser auto-fills email, first name, etc.) |
 | Form shows appropriate error message for invalid fields | Error messages (e.g., "'email' is not a valid email", "${fieldName} is required") |
-
