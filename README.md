@@ -1,4 +1,11 @@
 # Raksul TestExam
+## Cypress project introduction:
+- Manage different ENVs via .env file
+- Design tests structure based on POM
+- Integration with github actions, CICD pipeline, parallel run
+- Integration with cypress cloud: Push notification to slack channel, cypress reports (Cost money)
+- Save artifact reports after run complete (Github Free)
+- Able to run E2E and API tests
 How to setup Cypress test:
 ## 1. Download and Install  Node.js & NPM: 
 - https://nodejs.org/en/download/
