@@ -1,0 +1,21 @@
+{
+  "name": "raksultestexam",
+  "version": "1.0.0",
+  "description": "Automation test with Cypress",
+  "main": "index.js",
+  "scripts": {
+    "cypress:open:staging": "CYPRESS_ENV=staging npx cypress open"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^13.16.1",
+    "cypress-mochawesome-reporter": "^3.8.2",
+    "dotenv-webpack": "^8.1.0",
+    "mochawesome": "^7.1.3",
+    "mochawesome-merge": "^4.3.0",
+    "typescript": "^5.7.2",
+    "uuid": "^11.0.3",
+    "xlsx": "^0.18.5"
+  }
+}

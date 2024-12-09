@@ -1,0 +1,47 @@
+export const submitFormLocators = {
+    emailLabel: '[for="form_item_email"]',
+    email: '#form_item_email',
+    lastNameLabel: '[for="form_item_lastName"]',
+    lastName: '#form_item_lastName',
+    firstNameLabel: '[for="form_item_firstName"]',
+    firstName: '#form_item_firstName',
+    whereDidYouHearLabel: '[for="form_item_infoSource"]',
+    whereDidYouHear: '.ant-select-selection-item',
+    serVicesOfInterestLabel: '[for="form_item_servicesOfInterest"]',
+    checkBoxOption: '#form_item_servicesOfInterest',
+    checkBoxItem: 'input[class="ant-checkbox-input"]',
+    typeOfAssociationLabel: '[for="form_item_typeOfAssociation"]',
+    radioOptions: '#form_item_typeOfAssociation',
+    radioItem: 'input[class="ant-radio-input"]',
+    explanationLabel: '[for="form_item_explanation"]',
+    explanation: '#form_item_explanation',
+    successMessage: '[class="ant-alert-message"]',
+}
+
+export const submitFormTexts = {
+    emailLabel: 'Email',
+    lastNameLabel: 'Last Name',
+    firstNameLabel: 'First Name',
+    whereDidYouHearLabel: 'Where did you hear about us?',
+    serVicesOfInterestLabel: 'Services of Interest',
+    printing: 'Printing',
+    logistics: 'Logistics',
+    advertisement: 'Advertisement',
+    typeOfAssociationLabel: 'Type of Association',
+    prospect: 'Prospect',
+    partner: 'Partner',
+    reseller: 'Reseller',
+    vendor: 'Vendor',
+    other: 'Other',
+    explanationLabel: 'Explanation',
+    submit: 'Submit',
+    successMessage: 'Your inquiry has been submitted successfully!',
+}
+
+export const whereDidYouHearOptions = {
+    searchEngine: 'Search engines',
+    recommendation: 'Recommended by friend',
+    socialMedia: 'Social media',
+    emailMarketing: 'Email marketing',
+    others: 'Other',
+}
