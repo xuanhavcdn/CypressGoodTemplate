@@ -30,7 +30,7 @@ describe('Submit Form Tests', () => {
         })
     })
 
-    it.only('Submit form with valid data', () => {
+    it('Submit form with valid data', () => {
         cy.get(submitFormLocators.email).type(randomData.email)
         cy.get(submitFormLocators.lastName).type(randomData.lastName)
         cy.get(submitFormLocators.firstName).type(randomData.firstName)
