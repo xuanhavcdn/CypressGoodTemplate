@@ -11,6 +11,7 @@ export const submitFormLocators = {
     infoSourceField: '#field_infoSource',
     infoSourceLabel: '[for="form_item_infoSource"]',
     infoSourceInput: '.ant-select-selection-item',
+    selectItem: '[class="ant-select-item-option-content"]',
     servicesOfInterestField: '#field_servicesOfInterest',
     servicesOfInterestLabel: '[for="form_item_servicesOfInterest"]',
     checkBoxOption: '#form_item_servicesOfInterest',
