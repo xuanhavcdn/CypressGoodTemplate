@@ -38,6 +38,9 @@ CYPRESS_ENV=staging npx cypress run
 | Can select multiple services of interest               | "Services of Interest" checkboxes (Printing, Logistics, Advertisement) |
 | Can select only 1 valid option for "Type of Association" | "Type of Association" radio button (Prospect, Partner, Reseller, Vendor, Other) |
 | Can type a valid explanation                           | Explanation input field                                         |
+| Form can handle special characters in the firstName, lastName, Explanation field | firstName, lastName, Explanation input field (input special characters like @, #, $, %) |
+| First Name, Last Name, and Explanation fields accept valid input maximum length | First Name, Last Name, Explanation input fields (check max character limits) |
+| First Name, Last Name, and Explanation fields accept valid input minimum length | First Name, Last Name, Explanation input fields (check min character required) |
 | Form submits successfully with all required fields filled | Submit button (all fields filled correctly)                     |
 | Form submission shows success message                  | Success message after form submission ("Your inquiry has been submitted successfully!") |
 | Form doesn't submit with missing required fields       | Submit button (missing fields: email, first name, last name, infoSource, Services of Interest, type of association) |
@@ -48,10 +51,8 @@ CYPRESS_ENV=staging npx cypress run
 | Form submits and records services of interest          | Submit button (multiple services selected like "Printing" and "Logistics") |
 | Form correctly handles long text input for "Explanation" | Explanation input field (long text input)                      |
 | Email, First Name, Last Name, Where Did You Hear About Us, Services of Interest, and Type of Association fields are required and show error when left empty | Submit button (empty fields: email, first name, last name, whereDidYouHear, servicesOfInterest, typeOfAssociation) |
-| Form can handle special characters in the "Explanation" field | Explanation input field (input special characters like @, #, $, %) |
 | Email field shows validation message for incorrect format | Email input field (invalid format, e.g., missing domain)        |
 | Form layout is responsive on mobile devices            | Test the form layout on mobile devices (small screens)         |
-| First Name, Last Name, and Explanation fields accept valid input length | First Name, Last Name, Explanation input fields (check max character limits) |
 | Form doesn't submit with partially filled fields (missing some required fields) | Submit button (e.g., email and first name filled, but missing explanation or services) |
 | Form prevents multiple submissions                     | Submit button (prevent multiple clicks or submissions)         |
 | Focus is correctly set to the first field on form load | First Name (or email, depending on your form flow) input field  |
