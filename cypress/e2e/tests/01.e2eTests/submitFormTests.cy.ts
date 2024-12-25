@@ -8,7 +8,7 @@ const randomData = {
     lastName: `lastName ${randomText}`,
     explanation: `explanation ${randomText}`,
 }
-
+// Console
 function inputFormFields(infoSource: string, servicesOfInterest: string, typeOfAssociation: string, isExplanation = true) {
     cy.get(submitFormLocators.emailInput).type(randomData.email)
     cy.get(submitFormLocators.lastNameInput).type(randomData.lastName)
